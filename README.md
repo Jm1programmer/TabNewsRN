@@ -81,7 +81,7 @@ $ git clone https://github.com/Jm1programmer/TabNewsRN.git
 # Go to the repository
 $ cd TabNewsRN
 # install the dependencies
-$ npm install
+$ npm install --force
 ```
 
 
