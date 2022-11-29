@@ -1,12 +1,10 @@
 import React from "react";
 import { Text, StyleSheet, View, Dimensions, TouchableOpacity} from "react-native";
 
-import Logo from '../../assets/logo.png'
+
 
 import { COLORS } from "../colors";
 
-import AIcon from 'react-native-vector-icons/AntDesign';
-import FIcon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 
 export default function Posts({title, tabcoins, owner_username, children_deep_count, slug }) {

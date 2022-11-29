@@ -13,4 +13,4 @@ export async function GetContent() {
         console.log(error)
         return {}
     }
-}
+};

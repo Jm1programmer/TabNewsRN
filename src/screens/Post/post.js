@@ -11,7 +11,7 @@ import { COLORS } from "../../colors";
 
 export default function Post() {
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
 
     const route = useRoute()
     const owner_username = route.params.owner_username;

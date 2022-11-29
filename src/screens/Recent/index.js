@@ -5,7 +5,7 @@ import { COLORS } from "../../colors";
 
 
 import TopMenu from "../../components/topMenu";
-import BottomMenu from '../../components/BottomMenu'
+import BottomMenu from '../../components/BottomMenu';
 import PostsFlatList from "../../components/postsFlatlist";
 import api from "../../services/api";
 
