@@ -1,12 +1,12 @@
 import React, {useEffect,useState} from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, ScrollView } from "react-native";
 
 import { COLORS } from "../../colors";
 
 
 import TopMenu from "../../components/topMenu";
 import BottomMenu from '../../components/BottomMenu'
-
+import Post from "./post";
 
 
 
@@ -17,8 +17,10 @@ export default function PostScreen() {
     
     <View style={styles.screen}>
     <TopMenu />
-   
- 
+
+  <ScrollView>
+    <Post />
+    </ScrollView>
 
     </View>
     <BottomMenu />
