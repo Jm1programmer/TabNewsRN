@@ -7,13 +7,20 @@ import { COLORS } from "../colors";
 
 import AIcon from 'react-native-vector-icons/AntDesign';
 import FIcon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 
-export default function Posts() {
+export default function Posts({title, tabcoins, owner_username, children_deep_count }) {
+
+ //https://www.tabnews.com.br/api/v1/contents/Aguiar01/meus-projetos-para-mobile
+
+ const navigation = useNavigation()
   return <>
-    <View style={styles.Posts}>
-        <Text style={styles.Title}>1.  🌟 Meus projetos para mobile</Text>
-        <Text style={styles.Info}>24 tabcoins · Aguiar · 1 dia</Text>
-    </View>
+    <TouchableOpacity style={styles.Posts} onPress={() => {
+      navigation.navigate('Post')
+    }} >
+        <Text style={styles.Title}>{title}</Text>
+        <Text style={styles.Info}>{tabcoins} tabcoins · {owner_username} · {children_deep_count} comentarios</Text>
+    </TouchableOpacity>
 
   </>
 }
@@ -45,11 +52,12 @@ const styles = StyleSheet.create({
     },
 
     Info: {
-        color: COLORS.White,
+      color: COLORS.White,
       fontFamily: 'Roboto-Regular',
-      fontSize: 14,
-      paddingVertical: 25,
-      alignSelf: 'flex-end'
+      fontSize: 12,
+      alignSelf: 'flex-end',
+      paddingVertical: 26,
+     
     }
 
 })

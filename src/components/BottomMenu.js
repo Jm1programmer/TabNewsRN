@@ -7,12 +7,17 @@ import { COLORS } from "../colors";
 
 import AIcon from 'react-native-vector-icons/AntDesign';
 import FIcon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 
 export default function BottomMenu() {
+  const navigation = useNavigation()
   return <>
+  
     <View style={styles.BottomMenu}>
 
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => {
+      navigation.navigate('Recent')
+    }} >
      <AIcon style={styles.SearchIcon} name="home" size={25} color={COLORS.White} />
     </TouchableOpacity>
 

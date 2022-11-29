@@ -2,8 +2,7 @@ import React, {  useState } from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import RecentScreen from "./screens/Recent";
-import { COLORS } from "./colors";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import PostScreen from "./screens/Post";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +25,10 @@ export default function StackRoutes() {
           <Stack.Screen name="Recent" component={RecentScreen} 
          
            />
+
+          <Stack.Screen name="Post" component={PostScreen} 
+                  
+                  />
           </>
       </Stack.Navigator>
     );
