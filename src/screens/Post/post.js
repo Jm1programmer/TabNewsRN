@@ -5,8 +5,8 @@ import { ActivityIndicator } from "react-native";
 import { COLORS } from "../../colors";
  import api from "../../services/api";
 
-
-
+import Markdown from "react-native-markdown-display";
+import Markdownstyles from "../../styles/markdownStyles";
 
 
 export default function Post() {
@@ -35,28 +35,33 @@ export default function Post() {
     const getContent = async () => {
         const resultado = await GetContent()
         setLista(resultado)
-       
+        setLoading(false)
      }
 
 
      useEffect(() => {
         getContent()
-        setLoading(false)
+        
      }, [])
 
-     if (loading) {
-        <Loading />
-     }
 
+     if (loading == false) {
   return <>
     
     <View style={styles.post}>
+        
         <Text style={styles.title}>{lista.title}</Text>
-        <Text style={styles.body}>{lista.body}</Text>
+        <Markdown
+         style={Markdownstyles}
+         >{`${lista.body}`}</Markdown>
     </View>
     
   </>
+} else {
+    return <Loading />
 }
+} 
+
 
 function Loading() {
     return <>
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
     post: {
         flex: 1,
         backgroundColor: COLORS.LightGray,
-      marginLeft: 15,
+      marginLeft: 10,
         marginTop: 10,
     },
     title: {
