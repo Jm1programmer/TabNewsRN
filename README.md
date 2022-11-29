@@ -95,10 +95,10 @@ $ npx react-native run-android
 ```
 
 <h2>🫵 Contribua </h2>
-Me mande um e-mail, ou uma mensagem no discord se voce gostou, vai me deixar muito feliz :)
+Me mande um e-mail, ou uma mensagem no discord se gostar, me deixará muito feliz :)
   <br>
 <ul>
-<li> 🐞 Ache e reporte bugs </li>
+<li> 🐞 Encontre e reporte bugs </li>
 <li> 🌟 De uma estrela no projeto</li>
 </ul>
  
